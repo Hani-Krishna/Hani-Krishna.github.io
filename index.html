@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hani | Portfolio</title>
+  <!-- For ICO format -->
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Portfolio.</div>
+
+    <!-- Menu Icon for Mobile -->
+    <div id="menu-toggle" class="menu-icon">&#9776;</div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Skills</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+<script src="script.js"></script>
+  </header>
+
+  <!-- Home Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h3>Hello, It's Me</h3>
+      <h1><span>Hani</span></h1>
+      <h2>And I'm a <span>Python, ML enthusiast & aspiring developer</span></h2>
+      <p>I’m passionate about building real-world tech projects and learning something new every day.</p>
+
+      <div class="social-icons">
+        <a href="https://github.com/Hani-Krishna" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/25/ffffff/github.png" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/hani-krishna-98761b250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/25/ffffff/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+
+      <a href="hani_krishna resume.pdf" class="btn" download>Download resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I’m a Computer Science graduate passionate about solving real-world problems through code. I have hands-on experience with Java, C++, and Python, and I’ve built projects ranging from CCTV-based suspicious activity detection to stock price prediction using machine learning.</p>
+<div id="more-about" style="display: none;">
+    <p>
+      I’ve built projects like suspicious activity detection from CCTV footage and a stock price predictor using machine learning. I'm currently sharpening my skills in Data Structures and Algorithms and exploring system design.
+    </p>
+    <p>
+      I thrive in collaborative environments and am actively seeking SDE opportunities where I can grow, contribute, and build impactful tech.
+    </p>
+  </div>
+
+  <button id="about-toggle-btn" class="btn">Know More</button>
+  
+</section>
+
+  <!-- Skills Section -->
+  <section class="section" id="services">
+    <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-tabs">
+    <button class="tab-button active" data-tab="languages">Languages</button>
+    <button class="tab-button" data-tab="ml">Machine Learning</button>
+    <button class="tab-button" data-tab="toolkits">Toolkits</button>
+    <button class="tab-button" data-tab="concepts">Concepts</button>
+    <button class="tab-button" data-tab="databases">Databases</button>
+  </div>
+
+  <div class="tab-content active" id="languages">
+    <p>Python, Java, C++, HTML, CSS</p>
+  </div>
+  <div class="tab-content" id="ml">
+    <p>NumPy, Pandas, Matplotlib, Data Preprocessing, Data Manipulation, Deep Learning</p>
+  </div>
+  <div class="tab-content" id="toolkits">
+    <p>TensorFlow, PyTorch</p>
+  </div>
+  <div class="tab-content" id="concepts">
+    <p>Data Structures, Algorithms, Object-Oriented Programming (OOP), Agile Methodology</p>
+  </div>
+  <div class="tab-content" id="databases">
+    <p>MySQL</p>
+  </div>
+</section>
+
+  <!-- Portfolio Section -->
+  <section class="section" id="portfolio">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Suspicious Activity Detection</h3>
+        <p>Built a deep learning system using CNN to catch unusual movements in surveillance videos—fast, accurate, and reliable.</p>
+        <a href="https://github.com/Hani-Krishna/Suspecious_activity_detection" target="_blank">GitHub Repo</a>
+      </div>
+      <div class="project-card">
+        <h3>Cyberbullying detection on social media</h3>
+        <p>Cyberbullying detection on social media using an optimized RNN model—90.45% accurate, fast, and reliable.</p>
+        <a href="https://github.com/Hani-Krishna/detection-of-cyberbullying-on-social-media-using-ML" target="_blank">GitHub Repo</a>
+      </div>
+      <!-- Add more projects here -->
+    </div>
+  </section>
+
+ <!-- Contact Section -->
+<section id="contact">
+  <h2><span>Contact</span> Me</h2>
+
+  <form
+    class="contact-form"
+    id="contact-form"
+  >
+    <div class="input-box">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+    </div>
+    <div class="input-box full">
+      <input type="text" name="subject" placeholder="Email Subject" />
+    </div>
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows="6"
+      required
+    ></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <!-- Success Popup -->
+<div id="popup" class="popup">
+  <p>Thank you! Your message has been sent. 😊</p>
+</div>
+ 
+  <p>
+    You can also directly mail to:
+    <a
+      href="mailto:hanikrishna2917@gmail.com?subject=Hi%20Hani!&body=I%20just%20saw%20your%20portfolio%20and..."
+      >hanikrishna2917@gmail.com</a
+    >
+  </p>
+</section>
+
+
+
+<!-- JavaScript -->
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Convert to URL-encoded format
+    const formEntries = new URLSearchParams();
+    for (const [key, value] of formData.entries()) {
+      formEntries.append(key, value);
+    }
+
+    fetch("https://script.google.com/macros/s/AKfycbysCopIoCIbhPpLklDF2zah_RziwHiR_BfWZS78ngHegDH9nyMT5i5n7bzH4zZURrgh/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formEntries.toString(),
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("popup").classList.add("show");
+        form.reset();
+        setTimeout(() => {
+          document.getElementById("popup").classList.remove("show");
+        }, 3000);
+      } else {
+        console.error("Form submission failed.");
+      }
+    })
+    .catch(error => {
+      console.error("Error!", error.message);
+    });
+  });
+</script>
+
+</body>
+</html>
